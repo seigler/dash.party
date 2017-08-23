@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-contents: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.confetti > canvas {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: auto;
+  width: 50%;
+  max-width: 80vmin;
+}
+
+.logo {
+  text-indent: -100vw;
+  overflow: hidden;
+  background-image: url(logo.svg);
+  padding-top: 100%;
+  line-height: 0;
+}
