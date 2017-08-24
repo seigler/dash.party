@@ -4,6 +4,15 @@
   'use strict';
 
   var DEFAULT_NUM_CONFETTI = 500,
+    CONFETTI_COLORS = [
+      "white",
+      "purple",
+      "#D12D23",
+      "#C1141A",
+      "#DD7512",
+      "#EAA813",
+      "#1BA58E"
+    ],
     animate = window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame ||
@@ -87,9 +96,10 @@
   };
 
   function color() {
-    return 'rgba(' + randomFrom(0, 256) + ', ' +
-      randomFrom(0, 256) + ', ' +
-      randomFrom(0, 256) + ', ' + Math.random() + ')';
+    // return 'rgba(' + randomFrom(0, 256) + ', ' +
+    //   randomFrom(0, 256) + ', ' +
+    //   randomFrom(0, 256) + ', ' + Math.random() + ')';
+    return CONFETTI_COLORS[randomFrom(0,CONFETTI_COLORS.length)];
   }
 
   function randomFrom(a, b, factor) {
